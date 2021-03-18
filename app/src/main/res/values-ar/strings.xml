@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StreetBank</string>
+    <string name="name">الاسم الكامل</string>
+    <string name="email">البريد الالكتروني</string>
+    <string name="password">كلمة المرور</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="age">العمر</string>
+    <string name="register">انشاء حساب جديد</string>
+    <string name="login">تسجيل دخول</string>
+
+</resources>

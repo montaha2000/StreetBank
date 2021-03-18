@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "595255027721",
+    "project_id": "formum-b8659",
+    "storage_bucket": "formum-b8659.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595255027721:android:4285ff691accc312c7b0d8",
+        "android_client_info": {
+          "package_name": "com.afq.formum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595255027721-g2u66qp42be38bvmj71r3v6eh7t3gaas.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQErED0BqF4_5Q2OBGNEiNeWmL8XWXgtg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595255027721-g2u66qp42be38bvmj71r3v6eh7t3gaas.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595255027721:android:b05281db2b5e22d5c7b0d8",
+        "android_client_info": {
+          "package_name": "com.afq.streetbank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595255027721-g2u66qp42be38bvmj71r3v6eh7t3gaas.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQErED0BqF4_5Q2OBGNEiNeWmL8XWXgtg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595255027721-g2u66qp42be38bvmj71r3v6eh7t3gaas.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
