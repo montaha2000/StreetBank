@@ -2,7 +2,7 @@ package com.afq.streetbank.Model;
 
 public class Item {
 
-    String UID;
+    String key;
 
     String img;
     String item;
@@ -17,8 +17,8 @@ public class Item {
     public Item() {
     }
 
-    public Item(String UID, String img, String item, String userName, String desc, double price, boolean isBorrow, boolean isSell, boolean isRent) {
-        this.UID = UID;
+    public Item(String key, String img, String item, String userName, String desc, double price, boolean isBorrow, boolean isSell, boolean isRent) {
+        this.key = key;
         this.img = img;
         this.item = item;
         this.userName = userName;
@@ -29,12 +29,12 @@ public class Item {
         this.isRent = isRent;
     }
 
-    public String getUID() {
-        return UID;
+    public String getkey() {
+        return key;
     }
 
-    public void setUID(String UID) {
-        this.UID = UID;
+    public void setkey(String key) {
+        this.key = key;
     }
 
     public String getImg() {

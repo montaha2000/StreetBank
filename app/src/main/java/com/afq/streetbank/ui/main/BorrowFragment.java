@@ -1,5 +1,7 @@
 package com.afq.streetbank.ui.main;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.service.autofill.Dataset;
 import android.util.Log;
@@ -16,6 +18,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.afq.streetbank.Adapter.RecyclerViewAdapter;
 import com.afq.streetbank.Model.Item;
 import com.afq.streetbank.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -30,6 +34,9 @@ public class BorrowFragment extends Fragment {
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("StreetBank");
+
+    FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+    FirebaseUser user = firebaseAuth.getCurrentUser();
 
     public static BorrowFragment newInstance(int index) {
         BorrowFragment fragment = new BorrowFragment();
@@ -70,6 +77,47 @@ public class BorrowFragment extends Fragment {
 
         rv.setLayoutManager(mLayoutManager);
         rv.setAdapter(mAdapter);
+
+        mAdapter.OnItemClickListener(new RecyclerViewAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                myRef.child("Users").child(user.getUid()).addChildEventListener(new ChildEventListener() {
+                    @Override
+                    public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+                        if (snapshot.getKey().equals("phone")){
+                            String url = "https://api.whatsapp.com/send?phone="+snapshot.getValue();
+                            Intent i = new Intent(Intent.ACTION_VIEW);
+                            i.setData(Uri.parse(url));
+                            startActivity(i);
+
+                        }
+                        Log.i("AFQ",snapshot.getValue().toString());
+                    }
+
+                    @Override
+                    public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+                    }
+
+                    @Override
+                    public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+
+                    }
+
+                    @Override
+                    public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+            }
+        });
 
         myRef.child("Items").addChildEventListener(new ChildEventListener() {
             @Override

@@ -8,17 +8,16 @@
     <string name="age">العمر</string>
     <string name="register">انشاء حساب جديد</string>
     <string name="login">تسجيل دخول</string>
+    <string name="tab_text_1">استعارة</string>
+    <string name="tab_text_2">ايجار</string>
+    <string name="tab_text_3">شراء</string>
+    <string name="add_item">اضافة عنصر</string>
+    <string name="about">عن التطبيق</string>
+    <string name="feedback">مراجعة التطبيق</string>
+    <string name="logout">تسجيل خروج</string>
+    <string name="about_txt">تطبيق يعمل على جمع ما هو فائض من اغراض المنزل وبيعها و تاجيرها او التبرع بها لمن تلزمه.</string>
+    <string name="submit_feedback">ارسال</string>
+    <string name="cancel_feedback">رجوع</string>
+    <string name="enter_feedback_comment">رايك بالتطبيق</string>
 
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <string name="tab_text_3">Buy</string>
-    <string name="add_item">Add Item</string>
-    <string name="about">about</string>
-    <string name="feedback">feedback</string>
-    <string name="logout">logout</string>
-    <string name="about_txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a urna ipsum. Quisque ut auctor eros, ac ultricies turpis. Suspendisse eget lacus vel nunc feugiat commodo. Curabitur aliquet neque id diam lacinia iaculis. Donec vel eros hendrerit erat vestibulum blandit sed eget est. Vivamus elementum, lacus eget tristique tempus, turpis felis vehicula ligula, a mollis sem magna a ipsum. Nullam laoreet iaculis sapien, et consectetur lorem rhoncus et. Aenean dictum nulla magna, vel rutrum leo luctus quis. Mauris eget velit ut est porta dapibus.</string>
-
-    <string name="submit_feedback">submit</string>
-    <string name="cancel_feedback">cancel</string>
-    <string name="enter_feedback_comment">Enter feedback comment</string>
 </resources>

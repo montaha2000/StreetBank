@@ -109,7 +109,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
 
         if (phone.isEmpty()) {
-            edtPhoneNumber.setError("Name is required");
+            edtPhoneNumber.setError("Phone is required");
             edtPhoneNumber.requestFocus();
             return;
         }

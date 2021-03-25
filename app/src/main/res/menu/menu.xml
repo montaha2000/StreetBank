@@ -9,9 +9,4 @@
     <item android:title="@string/logout"
         android:id="@+id/logout"/>
 
-    <item android:title="@string/logout"
-        android:id="@+id/search"
-        app:showAsAction="always"
-        android:icon="@drawable/ic_baseline_search_24" />
-
 </menu>
