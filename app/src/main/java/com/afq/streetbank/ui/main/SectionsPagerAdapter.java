@@ -32,19 +32,17 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         switch(position){
             case 0 :
-                f= BorrowFragment.newInstance(position );
+                f= DonateFragment.newInstance(position);
                 break;
             case 1 :
                 f= RentFragment.newInstance(position);
                 break;
             case 2 :
-                f= BuyFragment.newInstance(position );
+                f= BuyFragment.newInstance(position);
                 break;
         }
         return f;
 
-        // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
     }
 
     @Nullable

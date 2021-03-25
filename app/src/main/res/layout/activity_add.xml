@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
         android:layout_marginEnd="10dp"
-        android:text="To Borrow"
+        android:text="@string/tab_text_1"
         app:layout_constraintBottom_toTopOf="@+id/btnAdd"
         app:layout_constraintEnd_toEndOf="@+id/edtPrice"
         app:layout_constraintTop_toBottomOf="@+id/edtPrice" />
@@ -38,8 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="51dp"
         android:layout_marginTop="11dp"
-        android:checked="true"
-        android:text="To Sell"
+        android:text="@string/sell"
         app:layout_constraintBottom_toTopOf="@+id/btnAdd"
         app:layout_constraintStart_toEndOf="@+id/cbRent"
         app:layout_constraintTop_toBottomOf="@+id/edtPrice" />
@@ -50,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="8dp"
-        android:text="To Rent"
+        android:text="@string/tab_text_2"
         app:layout_constraintBottom_toTopOf="@+id/btnAdd"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPrice" />

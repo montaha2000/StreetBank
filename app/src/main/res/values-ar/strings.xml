@@ -8,9 +8,10 @@
     <string name="age">العمر</string>
     <string name="register">انشاء حساب جديد</string>
     <string name="login">تسجيل دخول</string>
-    <string name="tab_text_1">استعارة</string>
+    <string name="tab_text_1">تبرع</string>
     <string name="tab_text_2">ايجار</string>
     <string name="tab_text_3">شراء</string>
+    <string name="sell">بيع</string>
     <string name="add_item">اضافة عنصر</string>
     <string name="about">عن التطبيق</string>
     <string name="feedback">مراجعة التطبيق</string>
@@ -19,5 +20,6 @@
     <string name="submit_feedback">ارسال</string>
     <string name="cancel_feedback">رجوع</string>
     <string name="enter_feedback_comment">رايك بالتطبيق</string>
+    <string name="phone_helper">ادخل على شكل : +97x xxx xxx xxx</string>
 
 </resources>

@@ -3,7 +3,6 @@ package com.afq.streetbank.ui.main;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.service.autofill.Dataset;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,7 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-public class BorrowFragment extends Fragment {
+public class DonateFragment extends Fragment {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
 
@@ -38,8 +37,8 @@ public class BorrowFragment extends Fragment {
     FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
     FirebaseUser user = firebaseAuth.getCurrentUser();
 
-    public static BorrowFragment newInstance(int index) {
-        BorrowFragment fragment = new BorrowFragment();
+    public static DonateFragment newInstance(int index) {
+        DonateFragment fragment = new DonateFragment();
         Bundle bundle = new Bundle();
         bundle.putInt(ARG_SECTION_NUMBER, index);
         fragment.setArguments(bundle);
@@ -124,11 +123,13 @@ public class BorrowFragment extends Fragment {
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 for (DataSnapshot snap : snapshot.getChildren()) {
 
-                    if (snap.getKey().equals("borrow") && snap.getValue().equals(true)) {
+                    if (snap.getKey().equals("donate") && snap.getValue().equals(true)) {
 
                         Item i = snapshot.getValue(Item.class);
 
                         mUploads.add(i);
+                        assert i != null;
+                        i.setPrice(0);
                         mAdapter.notifyDataSetChanged();
                     }
                 }

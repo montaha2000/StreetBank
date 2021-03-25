@@ -8,7 +8,7 @@
     <string name="age">Age</string>
     <string name="register">Register</string>
     <string name="login">Login</string>
-    <string name="tab_text_1">Borrow</string>
+    <string name="tab_text_1">Donate</string>
     <string name="tab_text_2">Rent</string>
     <string name="tab_text_3">Buy</string>
     <string name="add_item">Add Item</string>
@@ -19,5 +19,7 @@
     <string name="submit_feedback">Submit</string>
     <string name="cancel_feedback">Cancel</string>
     <string name="enter_feedback_comment">Enter feedback comment</string>
+    <string name="sell">sell</string>
+    <string name="phone_helper">Enter as : +97x xxx xxx xxx</string>
 
 </resources>

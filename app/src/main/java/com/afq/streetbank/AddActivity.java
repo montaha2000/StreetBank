@@ -150,10 +150,14 @@ public class AddActivity extends AppCompatActivity {
 
         if (cbRent.isChecked()) {
             i.setRent(true);
+
         }
 
         if (cbBorrow.isChecked()) {
-            i.setBorrow(true);
+            i.setDonate(true);
+            i.setPrice(0);
+            edtPrice.setFocusable(false);
+            edtPrice.setEnabled(false);
         }
 
         if (cbSell.isChecked()) {

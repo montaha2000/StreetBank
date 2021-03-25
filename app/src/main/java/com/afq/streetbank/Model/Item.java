@@ -10,21 +10,21 @@ public class Item {
     String desc;
     double price;
 
-    boolean isBorrow;
+    boolean isDonate;
     boolean isSell;
     boolean isRent;
 
     public Item() {
     }
 
-    public Item(String key, String img, String item, String userName, String desc, double price, boolean isBorrow, boolean isSell, boolean isRent) {
+    public Item(String key, String img, String item, String userName, String desc, double price, boolean isDonate, boolean isSell, boolean isRent) {
         this.key = key;
         this.img = img;
         this.item = item;
         this.userName = userName;
         this.desc = desc;
         this.price = price;
-        this.isBorrow = isBorrow;
+        this.isDonate = isDonate;
         this.isSell = isSell;
         this.isRent = isRent;
     }
@@ -77,12 +77,12 @@ public class Item {
         this.price = price;
     }
 
-    public boolean isBorrow() {
-        return isBorrow;
+    public boolean isDonate() {
+        return isDonate;
     }
 
-    public void setBorrow(boolean borrow) {
-        isBorrow = borrow;
+    public void setDonate(boolean donate) {
+        isDonate = donate;
     }
 
     public boolean isSell() {

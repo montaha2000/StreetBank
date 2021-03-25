@@ -77,6 +77,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="46dp"
         android:hint="@string/phone_number"
+        app:helperText="@string/phone_helper"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtFullName">

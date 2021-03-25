@@ -29,19 +29,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class BuyFragment extends Fragment {
 
+
     private static final String ARG_SECTION_NUMBER = "section_number";
-
-
-
-    RecyclerViewAdapter mAdapter;
-    RecyclerView.LayoutManager mLayoutManager;
-    ArrayList<Item> mUploads = new ArrayList<>();
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("StreetBank");
 
     FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
     FirebaseUser user = firebaseAuth.getCurrentUser();
+
 
     public static BuyFragment newInstance(int index) {
         BuyFragment fragment = new BuyFragment();
@@ -69,6 +65,10 @@ public class BuyFragment extends Fragment {
 
         final RecyclerView rv = root.findViewById(R.id.rv);
 
+        RecyclerViewAdapter mAdapter;
+        RecyclerView.LayoutManager mLayoutManager;
+        ArrayList<Item> mUploads = new ArrayList<>();
+
         mLayoutManager = new LinearLayoutManager(getActivity());
         mAdapter = new RecyclerViewAdapter(mUploads, getActivity());
 
@@ -76,6 +76,7 @@ public class BuyFragment extends Fragment {
 
         rv.setLayoutManager(mLayoutManager);
         rv.setAdapter(mAdapter);
+
         mAdapter.OnItemClickListener(new RecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
@@ -124,7 +125,6 @@ public class BuyFragment extends Fragment {
                 for (DataSnapshot snap : snapshot.getChildren()) {
 
                     if (snap.getKey().equals("sell") && snap.getValue().equals(true)) {
-
                         Item i = snapshot.getValue(Item.class);
 
                         mUploads.add(i);
@@ -156,5 +156,4 @@ public class BuyFragment extends Fragment {
 
         return root;
     }
-
 }
