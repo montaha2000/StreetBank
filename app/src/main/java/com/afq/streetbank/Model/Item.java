@@ -4,11 +4,11 @@ public class Item {
 
     String key;
 
-    String img;
     String item;
     String userName;
     String desc;
-    double price;
+    int price;
+    String contact;
 
     boolean isDonate;
     boolean isSell;
@@ -17,9 +17,8 @@ public class Item {
     public Item() {
     }
 
-    public Item(String key, String img, String item, String userName, String desc, double price, boolean isDonate, boolean isSell, boolean isRent) {
+    public Item(String key, String item, String userName, String desc, int price, boolean isDonate, boolean isSell, boolean isRent) {
         this.key = key;
-        this.img = img;
         this.item = item;
         this.userName = userName;
         this.desc = desc;
@@ -29,20 +28,20 @@ public class Item {
         this.isRent = isRent;
     }
 
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+
     public String getkey() {
         return key;
     }
 
     public void setkey(String key) {
         this.key = key;
-    }
-
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
     }
 
     public String getItem() {
@@ -69,11 +68,11 @@ public class Item {
         this.desc = desc;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 

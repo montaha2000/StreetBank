@@ -21,5 +21,6 @@
     <string name="cancel_feedback">رجوع</string>
     <string name="enter_feedback_comment">رايك بالتطبيق</string>
     <string name="phone_helper">ادخل على شكل : +97x xxx xxx xxx</string>
+    <string name="details">التفاصيل</string>
 
 </resources>

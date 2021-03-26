@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.afq.streetbank.Adapter.RecyclerViewAdapter;
+import com.afq.streetbank.DetailsActivity;
 import com.afq.streetbank.Model.Item;
 import com.afq.streetbank.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -80,41 +81,19 @@ public class BuyFragment extends Fragment {
         mAdapter.OnItemClickListener(new RecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                myRef.child("Users").child(user.getUid()).addChildEventListener(new ChildEventListener() {
-                    @Override
-                    public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
 
-                        if (snapshot.getKey().equals("phone")){
-                            String url = "https://api.whatsapp.com/send?phone="+snapshot.getValue();
-                            Intent i = new Intent(Intent.ACTION_VIEW);
-                            i.setData(Uri.parse(url));
-                            startActivity(i);
+                Intent detailIntent = new Intent(getActivity(), DetailsActivity.class);
+                Item clickedItem = mUploads.get(position);
 
+                detailIntent.putExtra("item", clickedItem.getItem());
+                detailIntent.putExtra("desc", clickedItem.getDesc());
+                detailIntent.putExtra("price", clickedItem.getPrice());
+                detailIntent.putExtra("name", clickedItem.getUserName());
+                detailIntent.putExtra("key",clickedItem.getkey());
 
-                        }
-                        Log.i("AFQ",snapshot.getValue().toString());
-                    }
+                Log.i("AFQ","clickedItem.getPrice()" + clickedItem.getPrice());
 
-                    @Override
-                    public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-                    }
-
-                    @Override
-                    public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-
-                    }
-
-                    @Override
-                    public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
+                startActivity(detailIntent);
 
             }
         });

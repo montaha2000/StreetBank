@@ -29,7 +29,6 @@ import androidx.viewpager.widget.ViewPager;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText edtSearch;
     private Toolbar myToolbar;
     FragmentManager fm;
     FragmentTransaction ft;
@@ -71,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initView() {
-        edtSearch = findViewById(R.id.edtSearch);
         myToolbar = findViewById(R.id.my_toolbar);
     }
 
@@ -112,7 +110,4 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-
-
 }

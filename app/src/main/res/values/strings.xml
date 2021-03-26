@@ -21,5 +21,6 @@
     <string name="enter_feedback_comment">Enter feedback comment</string>
     <string name="sell">sell</string>
     <string name="phone_helper">Enter as : +97x xxx xxx xxx</string>
+    <string name="details">Details</string>
 
 </resources>

@@ -22,16 +22,6 @@
         tools:layout_editor_absoluteY="1dp">
 
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/orange"
-            android:padding="@dimen/_5sdp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/ic_baseline_chat_24" />
-
         <ImageView
             android:id="@+id/imgItem"
             android:layout_width="130dp"

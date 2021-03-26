@@ -118,7 +118,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView txtItem;
         TextView txtPrice;
         ImageView imgItem;
-        ImageButton imageButton;
 
         public ViewHolder(View view) {
             super(view);
@@ -128,25 +127,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             txtItem = view.findViewById(R.id.txtItem);
             txtPrice = view.findViewById(R.id.txtPrice);
             imgItem = view.findViewById(R.id.imgItem);
-            imageButton = view.findViewById(R.id.imageButton);
 
 
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (listener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            listener.onItemClick(position);
-                        }
-                    }
-                }
-            });
-
-            imageButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
+            view.setOnClickListener(v -> {
+                if (listener != null) {
                     int position = getAdapterPosition();
                     if (position != RecyclerView.NO_POSITION) {
                         listener.onItemClick(position);
@@ -154,11 +138,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 }
             });
 
-        }
 
-        @Override
-        public String toString() {
-            return super.toString() + " '";
         }
     }
 }
