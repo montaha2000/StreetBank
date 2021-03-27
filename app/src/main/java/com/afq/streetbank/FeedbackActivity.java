@@ -1,5 +1,6 @@
 package com.afq.streetbank;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -37,10 +38,9 @@ public class FeedbackActivity extends AppCompatActivity {
     private RecyclerView rvFeedback;
     private FloatingActionButton fabFeedback;
 
-    FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("StreetBank");
+    FirebaseAuth mAuth= FirebaseAuth.getInstance();
     FirebaseUser user;
 
 
@@ -62,10 +62,17 @@ public class FeedbackActivity extends AppCompatActivity {
         ShowData();
         BuildRecycler();
 
-        fabFeedback.setOnClickListener(view ->
-                BuildDialog());
+        fabFeedback.setOnClickListener(view -> {
 
-
+            if (mAuth.getCurrentUser() != null) {
+                BuildDialog();
+            } else {
+                finish();
+                Intent i;
+                i = new Intent(FeedbackActivity.this, LoginActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
 
@@ -73,7 +80,7 @@ public class FeedbackActivity extends AppCompatActivity {
         myToolbar = findViewById(R.id.my_toolbar);
         rvFeedback = findViewById(R.id.rvFeedback);
         fabFeedback = findViewById(R.id.fabFeedback);
-        user = firebaseAuth.getCurrentUser();
+        user = mAuth.getCurrentUser();
         mLayoutManager = new LinearLayoutManager(this);
         mAdapter = new FeedbackRecyclerViewAdapter(mUploads, FeedbackActivity.this);
 

@@ -8,6 +8,7 @@
     <string name="age">Age</string>
     <string name="register">Register</string>
     <string name="login">Login</string>
+    <string name="browse">Just Browsing</string>
     <string name="tab_text_1">Donate</string>
     <string name="tab_text_2">Rent</string>
     <string name="tab_text_3">Buy</string>
@@ -15,7 +16,9 @@
     <string name="about">About</string>
     <string name="feedback">Feedback</string>
     <string name="logout">Logout</string>
-    <string name="about_txt">App for selling, borrowing or renting items that people may need.</string>
+    <string name="about_txt">1-فلوسك ع قدك عنا الحل تطبيق Street Bank للقطع المستعملة لأول مرة في قطاع غزة الأكثر راحة وآمان. \n \n
+2-بدك تتسوق وانت في بيتك عنا الحل تطبيق Street Bankبيوفر وقتك وبيقضي حاجتك ومن منطقتك تطبيق آمن وبيحافظ ع سلامتك Street Bank خيارك الافضل.\n \n
+3-نعلن عن تطبيق يساعدك على التخلص من مشكلة الاشياء الفائضة في بيتك ويدعم فكرة التبرع ب الشكل المثالي. </string>
     <string name="submit_feedback">Submit</string>
     <string name="cancel_feedback">Cancel</string>
     <string name="enter_feedback_comment">Enter feedback comment</string>

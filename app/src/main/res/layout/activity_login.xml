@@ -39,16 +39,13 @@
         android:id="@+id/txtRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="151dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginTop="20dp"
         android:text="@string/register"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/_20sdp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.994"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
-        app:layout_constraintVertical_bias="0.914" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edtEmail"
@@ -90,6 +87,20 @@
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txtBrowse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/browse"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/purple_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRegister"
+        app:layout_constraintVertical_bias="0.422" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -78,24 +78,21 @@ public class BuyFragment extends Fragment {
         rv.setLayoutManager(mLayoutManager);
         rv.setAdapter(mAdapter);
 
-        mAdapter.OnItemClickListener(new RecyclerViewAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(int position) {
+        mAdapter.OnItemClickListener(position -> {
 
-                Intent detailIntent = new Intent(getActivity(), DetailsActivity.class);
-                Item clickedItem = mUploads.get(position);
+            Intent detailIntent = new Intent(getActivity(), DetailsActivity.class);
+            Item clickedItem = mUploads.get(position);
 
-                detailIntent.putExtra("item", clickedItem.getItem());
-                detailIntent.putExtra("desc", clickedItem.getDesc());
-                detailIntent.putExtra("price", clickedItem.getPrice());
-                detailIntent.putExtra("name", clickedItem.getUserName());
-                detailIntent.putExtra("key",clickedItem.getkey());
+            detailIntent.putExtra("item", clickedItem.getItem());
+            detailIntent.putExtra("desc", clickedItem.getDesc());
+            detailIntent.putExtra("price", clickedItem.getPrice());
+            detailIntent.putExtra("name", clickedItem.getUserName());
+            detailIntent.putExtra("key",clickedItem.getkey());
 
-                Log.i("AFQ","clickedItem.getPrice()" + clickedItem.getPrice());
+            Log.i("AFQ","clickedItem.getPrice()" + clickedItem.getPrice());
 
-                startActivity(detailIntent);
+            startActivity(detailIntent);
 
-            }
         });
 
         myRef.child("Items").addChildEventListener(new ChildEventListener() {

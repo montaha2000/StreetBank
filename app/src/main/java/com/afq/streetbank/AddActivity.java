@@ -3,6 +3,7 @@ package com.afq.streetbank;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -175,7 +176,7 @@ public class AddActivity extends AppCompatActivity {
             }
         });
 
-
+        i.setContact(contactn);
 
         if (cbRent.isChecked()) {
             i.setRent(true);
@@ -192,7 +193,7 @@ public class AddActivity extends AppCompatActivity {
 
 
         myRef.child("Items").child(itemId).setValue(i).addOnSuccessListener(aVoid ->
-                Toast.makeText(AddActivity.this, "Item Added "+ contactn, Toast.LENGTH_SHORT).show());
+                Toast.makeText(AddActivity.this, "Item Added", Toast.LENGTH_SHORT).show());
 
     }
 

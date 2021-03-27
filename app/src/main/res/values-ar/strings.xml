@@ -8,6 +8,7 @@
     <string name="age">العمر</string>
     <string name="register">انشاء حساب جديد</string>
     <string name="login">تسجيل دخول</string>
+    <string name="browse">تصفح كزائر</string>
     <string name="tab_text_1">تبرع</string>
     <string name="tab_text_2">ايجار</string>
     <string name="tab_text_3">شراء</string>
@@ -16,7 +17,9 @@
     <string name="about">عن التطبيق</string>
     <string name="feedback">مراجعة التطبيق</string>
     <string name="logout">تسجيل خروج</string>
-    <string name="about_txt">تطبيق يعمل على جمع ما هو فائض من اغراض المنزل وبيعها و تاجيرها او التبرع بها لمن تلزمه.</string>
+    <string name="about_txt">1-فلوسك ع قدك عنا الحل تطبيق Street Bank للقطع المستعملة لأول مرة في قطاع غزة الأكثر راحة وآمان. \n \n
+2-بدك تتسوق وانت في بيتك عنا الحل تطبيق Street Bankبيوفر وقتك وبيقضي حاجتك ومن منطقتك تطبيق آمن وبيحافظ ع سلامتك Street Bank خيارك الافضل.\n \n
+3-نعلن عن تطبيق يساعدك على التخلص من مشكلة الاشياء الفائضة في بيتك ويدعم فكرة التبرع ب الشكل المثالي. </string>
     <string name="submit_feedback">ارسال</string>
     <string name="cancel_feedback">رجوع</string>
     <string name="enter_feedback_comment">رايك بالتطبيق</string>

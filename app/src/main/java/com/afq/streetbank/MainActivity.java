@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     FragmentManager fm;
     FragmentTransaction ft;
 
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +57,13 @@ public class MainActivity extends AppCompatActivity {
         FloatingActionButton fab = findViewById(R.id.fab);
 
         fab.setOnClickListener(view -> {
-            Intent i = new Intent(MainActivity.this, AddActivity.class);
+            Intent i;
+            if (mAuth.getCurrentUser() != null) {
+                i = new Intent(MainActivity.this, AddActivity.class);
+            } else {
+                finish();
+                i = new Intent(MainActivity.this,LoginActivity.class);
+            }
             startActivity(i);
         });
 
